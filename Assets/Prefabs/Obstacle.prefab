@@ -122,8 +122,8 @@ Transform:
   m_GameObject: {fileID: 2266357711740207718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2266357711657532091}
   - {fileID: 2266357712094076875}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 2266357712094076875}
   - component: {fileID: 2266357712094076879}
   - component: {fileID: 2266357712094076876}
-  - component: {fileID: 2266357712094076877}
+  - component: {fileID: 8874463075985439971}
   - component: {fileID: 2266357712094076874}
   - component: {fileID: 2266357712094076878}
   m_Layer: 0
@@ -216,8 +216,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &2266357712094076877
-CapsuleCollider:
+--- !u!65 &8874463075985439971
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -226,10 +226,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  serializedVersion: 2
+  m_Size: {x: 1.0000005, y: 2.0000005, z: 1.0000002}
+  m_Center: {x: 0.000000059604666, y: 0, z: -0.00000008940697}
 --- !u!114 &2266357712094076874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,4 +257,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d560c0ebd22595947b7e42d073d404f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceValue: -15
+  forceValue: -10

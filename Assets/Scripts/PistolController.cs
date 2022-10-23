@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PistolController : MonoBehaviour
 {
     public static PistolController instance;
@@ -25,6 +24,7 @@ public class PistolController : MonoBehaviour
 
     public void AddSpawnerBullet(BulletSpawner bulletSpawner)
     {
+        Vibration.Vibrate(50);
         switch (bulletSpawner.spawnerType)
         {
             case BulletSpawnerType.plus:
@@ -46,7 +46,8 @@ public class PistolController : MonoBehaviour
     }
 
     public void RemoveSpawnerBullet(BulletSpawner bulletSpawner)
-    {
+    {        
+        Vibration.Vibrate(100);
         switch (bulletSpawner.spawnerType)
         {
             case BulletSpawnerType.plus:
@@ -61,6 +62,8 @@ public class PistolController : MonoBehaviour
                 Debug.LogError("Not added to PistolController/RemoveSpawnerBullet ");
                 break;
         }
+        if (bulletPerSec < 1)
+            bulletPerSec = 1;
         GameManager.instance.UpdateBulletPerSecText(bulletPerSec);
         bulletSpawners.Remove(bulletSpawner);
         StopAllCoroutines();

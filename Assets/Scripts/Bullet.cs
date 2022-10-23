@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        Invoke("DestroyItself", 5);
+        Invoke("DestroyItself", 1f);
     }
 
     private void FixedUpdate()
@@ -18,6 +18,17 @@ public class Bullet : MonoBehaviour
 
     private void DestroyItself()
     {
+        Vibration.Vibrate(50);
         Destroy(gameObject);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Barrel"))
+        {
+            other.GetComponent<Barrel>().DecreaseHealth();
+            CancelInvoke();
+            DestroyItself();
+        }
+    }    
 }

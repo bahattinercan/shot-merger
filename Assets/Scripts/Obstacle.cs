@@ -10,18 +10,18 @@ public class Obstacle : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<Rigidbody>().AddForce(0, 0, forceValue, ForceMode.Impulse);
+            // finish the game
         }   
         else if (other.CompareTag("BulletSpawner"))
         {
-            other.GetComponent<Rigidbody>().AddForce(0, 0, forceValue, ForceMode.Impulse);
+            GameManager.instance.playerT.GetComponent<Rigidbody>().AddForce(0, 0, forceValue, ForceMode.Impulse);
             PistolController.instance.RemoveSpawnerBullet(other.GetComponent<BulletSpawner>());
             List<Transform> meshes = other.GetComponent<BulletSpawner>().meshList;
             foreach (Transform mesh in meshes)
             {
                 mesh.SetParent(null);
-                CubeCut.Cut(mesh.transform, transform.position);
-            }
-            
+                CubeCut.Cut(mesh.transform);
+            }            
         }
 
     }
