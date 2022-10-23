@@ -322,6 +322,10 @@ MonoBehaviour:
   - {fileID: 1090827109}
   - {fileID: 8919701941115711605}
   - {fileID: 6927925893974187285}
+  meshList:
+  - {fileID: 6927925893974187285}
+  - {fileID: 8919701941115711605}
+  - {fileID: 8341675954380608692}
   spawnerType: 1
   spawnIncreaseValue: 3
 --- !u!54 &1156643788

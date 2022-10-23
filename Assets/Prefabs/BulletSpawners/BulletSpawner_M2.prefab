@@ -320,6 +320,9 @@ MonoBehaviour:
   spawnPositions:
   - {fileID: 1090827109}
   - {fileID: 7959665782674856560}
+  meshList:
+  - {fileID: 7959665782674856560}
+  - {fileID: 8341675954380608692}
   spawnerType: 1
   spawnIncreaseValue: 2
 --- !u!54 &1156643788

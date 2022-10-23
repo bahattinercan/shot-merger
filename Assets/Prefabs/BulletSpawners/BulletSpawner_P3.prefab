@@ -320,6 +320,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPositions:
   - {fileID: 8312159801794789507}
+  meshList:
+  - {fileID: 8312159801794789507}
+  - {fileID: 8742359953905354685}
+  - {fileID: 8341675954380608692}
   spawnerType: 0
   spawnIncreaseValue: 3
 --- !u!54 &1156643788

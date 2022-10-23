@@ -11,6 +11,7 @@ public class BulletSpawner : MonoBehaviour
 {
     private bool isAddedToPistol = false;
     public List<Transform> spawnPositions;
+    public List<Transform> meshList;
     public BulletSpawnerType spawnerType;
     public int spawnIncreaseValue;
 

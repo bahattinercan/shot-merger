@@ -304,7 +304,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Center: {x: 0, y: 0, z: 0.5}
 --- !u!114 &8341675954380608696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +319,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPositions:
   - {fileID: 8949502351349579081}
+  meshList:
+  - {fileID: 8949502351349579081}
+  - {fileID: 8341675954380608692}
   spawnerType: 0
   spawnIncreaseValue: 2
 --- !u!54 &1156643788

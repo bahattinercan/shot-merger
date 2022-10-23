@@ -61,6 +61,7 @@ public class PistolController : MonoBehaviour
                 Debug.LogError("Not added to PistolController/RemoveSpawnerBullet ");
                 break;
         }
+        GameManager.instance.UpdateBulletPerSecText(bulletPerSec);
         bulletSpawners.Remove(bulletSpawner);
         StopAllCoroutines();
         StartSpawnBullet();
@@ -81,11 +82,17 @@ public class PistolController : MonoBehaviour
             }
         }
 
-        float bulletPerSecForEachSpawner = bulletPerSec / bulletPositions.Count;
-
-        foreach (Transform bulletPos in bulletPositions)
+        if (bulletPositions.Count != 0)
         {
-            StartCoroutine(SpawnBullet(bulletPerSecForEachSpawner, bulletPos));
+            float bulletPerSecForEachSpawner = bulletPerSec / (bulletPositions.Count);
+            foreach (Transform bulletPos in bulletPositions)
+            {
+                StartCoroutine(SpawnBullet(bulletPerSecForEachSpawner, bulletPos));
+            }
+        }
+        else
+        {
+            StartCoroutine(SpawnBullet(bulletPerSec, baseBulletSpawnPoint));
         }
     }
 
