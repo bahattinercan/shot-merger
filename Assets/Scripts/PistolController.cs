@@ -39,6 +39,7 @@ public class PistolController : MonoBehaviour
                 Debug.LogError("Not added to PistolController/AddSpawnerBullet ");
                 break;
         }
+        GameManager.instance.UpdateBulletPerSecText(bulletPerSec);
         bulletSpawners.Add(bulletSpawner);
         StopAllCoroutines();
         StartSpawnBullet();
@@ -81,6 +82,7 @@ public class PistolController : MonoBehaviour
         }
 
         float bulletPerSecForEachSpawner = bulletPerSec / bulletPositions.Count;
+
         foreach (Transform bulletPos in bulletPositions)
         {
             StartCoroutine(SpawnBullet(bulletPerSecForEachSpawner, bulletPos));
