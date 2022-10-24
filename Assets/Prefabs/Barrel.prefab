@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   healthText: {fileID: 1843928308126535500}
-  forceValue: -10
+  forceValue: -5
 --- !u!114 &1462538625
 MonoBehaviour:
   m_ObjectHideFlags: 0

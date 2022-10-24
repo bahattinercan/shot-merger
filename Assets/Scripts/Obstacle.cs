@@ -14,7 +14,7 @@ public class Obstacle : MonoBehaviour
         }   
         else if (other.CompareTag("BulletSpawner"))
         {
-            GameManager.instance.playerT.GetComponent<Rigidbody>().AddForce(0, 0, forceValue, ForceMode.Impulse);
+            //GameManager.instance.playerT.GetComponent<Rigidbody>().AddForce(0, 0, forceValue, ForceMode.Impulse);
             PistolController.instance.RemoveSpawnerBullet(other.GetComponent<BulletSpawner>());
             List<Transform> meshes = other.GetComponent<BulletSpawner>().meshList;
             foreach (Transform mesh in meshes)

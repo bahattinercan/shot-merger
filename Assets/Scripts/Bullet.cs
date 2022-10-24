@@ -17,8 +17,7 @@ public class Bullet : MonoBehaviour
     }
 
     private void DestroyItself()
-    {
-        Vibration.Vibrate(50);
+    {        
         Destroy(gameObject);
     }
 
@@ -26,6 +25,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Barrel"))
         {
+            Vibration.Vibrate(50);
             other.GetComponent<Barrel>().DecreaseHealth();
             CancelInvoke();
             DestroyItself();
